@@ -278,9 +278,6 @@ body {
   color: lightcyan;
   text-shadow: 0px 0px 10px aqua;
 }
-.wrap #circle article.face7 {
-  display: block;
-}
 .wrap #circle article.face7 .inner div > div {
   width: 100%;
   height: 100%;
@@ -314,6 +311,77 @@ body {
   bottom: 85px;
   right: -18px;
   width: 90%;
+}
+.wrap #circle article.face8 {
+  display: block;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(1) {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(1) i {
+  color: #fff;
+  font-size: 200px;
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+  opacity: 0.9;
+  transition: 0.5s;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(1) span {
+  font: bold 120px/1 "orbitron";
+  position: absolute;
+  bottom: 90px;
+  right: 60px;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(1) span em {
+  font: bold normal 60px/1 "arial";
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(2), .wrap #circle article.face8 .inner div:nth-of-type(3) {
+  width: 290px;
+  height: 380px;
+  margin-right: 20px;
+  float: left;
+  text-align: center;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(2) i, .wrap #circle article.face8 .inner div:nth-of-type(3) i {
+  font-size: 120px;
+  color: #fff;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(2) h3, .wrap #circle article.face8 .inner div:nth-of-type(3) h3 {
+  margin-top: 30px;
+  margin-bottom: 14px;
+  font: bold 20px/1 "orbitron";
+}
+.wrap #circle article.face8 .inner div:nth-of-type(2) p, .wrap #circle article.face8 .inner div:nth-of-type(3) p {
+  font: 16px/1 "arial";
+  color: #ccc;
+  margin-bottom: 40px;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(2) span, .wrap #circle article.face8 .inner div:nth-of-type(3) span {
+  font: 30px/1 "orbitron";
+  color: #ddd;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(2) span strong, .wrap #circle article.face8 .inner div:nth-of-type(3) span strong {
+  font-size: 16px;
+  color: #bbb;
+  position: relative;
+  top: -16px;
+  left: 5px;
+}
+.wrap #circle article.face8 .inner div:nth-of-type(3) {
+  margin-right: 0px;
+}
+.wrap #circle article.face8 .inner div:hover i {
+  transform: scale(1.2);
+  color: lightcyan;
+  text-shadow: 0px 0px 10px aqua;
 }
 
 /*# sourceMappingURL=style.css.map */
