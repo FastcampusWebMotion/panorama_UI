@@ -68,9 +68,7 @@ body {
          }
 
          //첫 번째 article
-         &.face1 {
-            display: block;
-
+         &.face1 {           
             .inner {
                div {
                   width: 290px;
@@ -108,6 +106,45 @@ body {
 
                   &:nth-of-type(odd) {
                      margin-right: 20px;
+                  }
+               }
+            }
+         }
+
+         //두 번째 article
+         &.face2 {          
+
+            .inner {
+               div {
+                  h2 {
+                     font: bold 24px/1 "Orbitron";
+                     color: lightcyan;
+                     transition: 0.5s;
+                  }
+
+                  img {
+                     width: 100%;
+                     margin-top: 30px;
+                     margin-bottom: 40px;
+                  }
+
+                  h3 {
+                     font: bold 20px/1 "orbitron";
+                     color: lightcyan;
+                     margin-bottom: 20px;
+                     transition: 0.5s;
+                  }
+
+                  p {
+                     font: 18px/1.3 "arial";
+                     color: #ccc;
+                  }
+
+                  &:hover {
+                     h2, h3 {
+                        color: lightcyan;
+                        text-shadow: 0px 0px 10px aqua;
+                     }
                   }
                }
             }
