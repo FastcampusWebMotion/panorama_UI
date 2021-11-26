@@ -13,6 +13,7 @@ body {
    height: 100vh;
    overflow: hidden;   
    position: relative;
+   perspective: 1300px; 
 
    > video {
       width: 100%;
@@ -35,8 +36,9 @@ body {
       top: 50%;
       left: 50%;
       margin-left: -300px;
-      margin-top: -400px; 
-      perspective: 1700px;   
+      margin-top: -400px;       
+      transform-style: preserve-3d; 
+      animation: ani linear 30s infinite; 
 
       article {
          width: 100%;
@@ -45,6 +47,25 @@ body {
          top: 0px;
          left: 0px;  
          backface-visibility: hidden;
+
+         h1 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-size: 30px;
+            color: lightcyan;
+            letter-spacing: 2px;
+            text-shadow: 0px 0px 10px aqua;
+            opacity: 0;
+            transition: 0.5s;
+         }
+
+         &:hover {
+            h1 {
+               top: -60px;
+               opacity: 1;
+            }
+         }
 
          //공통 UI
          .inner {
@@ -507,4 +528,9 @@ body {
 
       }
    }
+}
+
+@keyframes ani {
+   0% {transform: rotateY(0deg);}
+   100% {transform: rotateY(360deg);}
 }
