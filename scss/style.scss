@@ -11,8 +11,7 @@ body {
 .wrap {
    width: 100%;
    height: 100vh;
-   overflow: hidden;
-   perspective: 1300px;
+   overflow: hidden;   
    position: relative;
 
    > video {
@@ -25,6 +24,10 @@ body {
       opacity: 0.5;
    }
 
+   // 지름 * 3.14 = 원의 둘레길이
+   // 원의 둘레길이 / 3.14 = 지름
+   // 2400px / 3.14 = 764px (translateZ) article사이의 거리값
+
    #circle {
       width: 600px;
       height: 800px;
@@ -32,15 +35,16 @@ body {
       top: 50%;
       left: 50%;
       margin-left: -300px;
-      margin-top: -400px;    
+      margin-top: -400px; 
+      perspective: 1700px;   
 
       article {
          width: 100%;
          height: 100%;
          position: absolute;
          top: 0px;
-         left: 0px;         
-         display: none;
+         left: 0px;  
+         backface-visibility: hidden;
 
          //공통 UI
          .inner {
@@ -51,7 +55,7 @@ body {
                width: 100%;
                height: 100%;
                border: 1px solid rgba(255, 255,255,.5);
-               background: rgba(255,255,255,.4);
+               background: rgba(255,255,255,.2);
                box-sizing: border-box;
                padding: 50px;
                position: relative;
@@ -68,7 +72,9 @@ body {
          }
 
          //첫 번째 article
-         &.face1 {           
+         &.face1 {   
+            transform: rotateY(0deg) translateZ(-764px);
+
             .inner {
                div {
                   width: 290px;
@@ -113,6 +119,8 @@ body {
 
          //두 번째 article
          &.face2 {  
+            transform: rotateY(45deg) translateZ(-764px);
+
             .inner {
                div {
                   h2 {
@@ -151,7 +159,7 @@ body {
 
          //세 번째 article
          &.face3 {
-            //display: block;
+            transform: rotateY(90deg) translateZ(-764px);
 
             .inner {
                > div {
@@ -207,7 +215,7 @@ body {
 
          //네 번째 article
          &.face4 {
-            //display: block;
+            transform: rotateY(135deg) translateZ(-764px);
 
             .inner {
                div {
@@ -252,7 +260,7 @@ body {
 
          //다섯 번째 article
          &.face5 {
-            //display: block;
+            transform: rotateY(180deg) translateZ(-764px);
 
             .inner {
                div {
@@ -293,7 +301,7 @@ body {
 
          //여섯 번째 article
          &.face6 {
-            //display: block;
+            transform: rotateY(225deg) translateZ(-764px);
 
             .inner {
                > div {
@@ -362,7 +370,7 @@ body {
 
          //일곱 번째 article
          &.face7 {
-            //display: block;
+            transform: rotateY(270deg) translateZ(-764px);
 
             .inner {
                div > div {
@@ -408,7 +416,7 @@ body {
 
          //여덟 번째 article
          &.face8 {
-            display: block;
+            transform: rotateY(315deg) translateZ(-764px);
 
             .inner {
                div {

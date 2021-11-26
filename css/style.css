@@ -28,7 +28,6 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  perspective: 1300px;
   position: relative;
 }
 .wrap > video {
@@ -48,6 +47,7 @@ body {
   left: 50%;
   margin-left: -300px;
   margin-top: -400px;
+  perspective: 1700px;
 }
 .wrap #circle article {
   width: 100%;
@@ -55,7 +55,7 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-  display: none;
+  backface-visibility: hidden;
 }
 .wrap #circle article .inner {
   width: 100%;
@@ -65,7 +65,7 @@ body {
   width: 100%;
   height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
   padding: 50px;
   position: relative;
@@ -77,6 +77,9 @@ body {
 .wrap #circle article .inner > div:hover {
   opacity: 1;
   transform: scale(1.03);
+}
+.wrap #circle article.face1 {
+  transform: rotateY(0deg) translateZ(-764px);
 }
 .wrap #circle article.face1 .inner div {
   width: 290px;
@@ -109,6 +112,9 @@ body {
 .wrap #circle article.face1 .inner div:nth-of-type(odd) {
   margin-right: 20px;
 }
+.wrap #circle article.face2 {
+  transform: rotateY(45deg) translateZ(-764px);
+}
 .wrap #circle article.face2 .inner div h2 {
   font: bold 24px/1 "Orbitron";
   color: lightcyan;
@@ -132,6 +138,9 @@ body {
 .wrap #circle article.face2 .inner div:hover h2, .wrap #circle article.face2 .inner div:hover h3 {
   color: lightcyan;
   text-shadow: 0px 0px 10px aqua;
+}
+.wrap #circle article.face3 {
+  transform: rotateY(90deg) translateZ(-764px);
 }
 .wrap #circle article.face3 .inner > div {
   width: 100%;
@@ -174,6 +183,9 @@ body {
   font: 12px/1 "orbitron";
   color: aqua;
 }
+.wrap #circle article.face4 {
+  transform: rotateY(135deg) translateZ(-764px);
+}
 .wrap #circle article.face4 .inner div:nth-of-type(1) {
   width: 100%;
   height: 600px;
@@ -201,6 +213,9 @@ body {
   color: #ddd;
   margin-bottom: 5px;
 }
+.wrap #circle article.face5 {
+  transform: rotateY(180deg) translateZ(-764px);
+}
 .wrap #circle article.face5 .inner div img {
   margin-bottom: 40px;
 }
@@ -225,6 +240,9 @@ body {
 }
 .wrap #circle article.face5 .inner div:hover .reflect {
   top: -40%;
+}
+.wrap #circle article.face6 {
+  transform: rotateY(225deg) translateZ(-764px);
 }
 .wrap #circle article.face6 .inner > div {
   width: 100%;
@@ -278,6 +296,9 @@ body {
   color: lightcyan;
   text-shadow: 0px 0px 10px aqua;
 }
+.wrap #circle article.face7 {
+  transform: rotateY(270deg) translateZ(-764px);
+}
 .wrap #circle article.face7 .inner div > div {
   width: 100%;
   height: 100%;
@@ -313,7 +334,7 @@ body {
   width: 90%;
 }
 .wrap #circle article.face8 {
-  display: block;
+  transform: rotateY(315deg) translateZ(-764px);
 }
 .wrap #circle article.face8 .inner div:nth-of-type(1) {
   width: 100%;
